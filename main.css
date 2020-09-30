@@ -1,0 +1,195 @@
+html{
+   scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    min-height: 100px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: ghostwhite;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10%;
+    background-color: greenyellow;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.brand{
+    font-size: 3rem;
+}
+
+.menuIcon{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.modalMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.400);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 200;
+
+
+}
+
+.closeIcon{
+    color: orangered;
+    font-size: 2rem;
+    position: absolute;
+    top: 15vh;
+    right: 10%;
+
+}
+
+.closeIcon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.modalMenu a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem;
+    
+
+}
+.modalMenu  a:hover{
+    color: black;
+    font-size: 2.2rem;
+
+}
+
+.container{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+}
+.container section{
+    width: 100vw;  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home{
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 40px;
+}
+
+.homeImage{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100px 200px 200px 100px;
+    border: 12px solid yellow;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.homeText{
+    font-size: 8rem;
+    color: yellow;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+}
+
+.About{
+    background-image: url(http://picsum.photos/seed/451/1000);
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start !important;
+}   
+
+.Showcase{
+    background-image: url(http://picsum.photos/seed/451/1000);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rotateIcons{
+    font-size: 4rem;
+    color: white;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+}
+
+.Contact{
+    background-image: url(http://picsum.photos/seed/451/1000);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.alertAbout{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    color:black;
+    position: sticky;
+    top: 10vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes bottomToTop{
+
+    from{
+        transform:translateY(20vh);
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0vh);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}

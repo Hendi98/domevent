@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="belajar dom event">
+    <title>Domevent</title>
+</head>
+
+<body>
+    <div class="modalMenu" id="modalMenu">
+
+        <span class="material-icons closeIcon" onclick="showClose()">close</span>
+
+        <a href="#Home" onclick="showClose()">Home</a>
+        <a href="#About" onclick="showClose()">About</a>
+        <a href="#Showcase" onclick="showClose()">Showcase</a>
+        <a href="#Contact" onclick="showClose()">Contact</a>
+    </div>
+
+    <nav class="navbar">
+
+        <h3 class="brand">IDK</h3>
+        <span class="material-icons menuIcon" onclick="showModal()">menu_open</span>
+
+
+
+
+
+
+    </nav>
+
+    <main class="container">
+
+        <section class="Home" id="Home">
+            <img src="foto_engkong_orang.jpeg" alt="foto engkong orang" class="homeImage">
+
+            <h1 class="homeText">WEB PROFIL</ br> YOGA</h1>
+
+        </section>
+
+        <section class="About" id="About">
+            <span class="alertAbout">Selamat datang di web sederhana saya</span>
+            <h1 class="title">About</h1>
+        </section>
+
+        <section class="Showcase" id="Showcase">
+            <span class="material-icons rotateIcons ">
+                polymer
+            </span>
+        </section>
+
+        <section class="Contact" id="Contact">
+            <h1 class="title">Contact</h1>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
