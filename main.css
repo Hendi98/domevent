@@ -24,7 +24,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 40px;
     background-color: greenyellow;
     position: sticky;
     top: 0;
@@ -54,6 +54,7 @@ body{
     justify-content: center;
     gap: 20px;
     z-index: 200;
+    font-size: 25px;
 
 
 }
@@ -80,7 +81,7 @@ body{
 
 }
 .modalMenu  a:hover{
-    color: black;
+    color: yellow;
     font-size: 2.2rem;
 
 }
@@ -99,26 +100,27 @@ body{
 }
 
 .Home{
-    background-color: black;
+    flex-direction: column;
+    background-color: cornflowerblue;
     background-size: cover;
     background-attachment: fixed;
-    gap: 40px;
+    gap: 100px;
 }
 
 .homeImage{
     width: 350px;
     height: 350px;
     object-fit: cover;
-    object-position: center;
-    border-radius: 100px 200px 200px 100px;
-    border: 12px solid yellow;
+    object-position: right;
+    border-radius: 0px 0px 200px 200px;
+    border: 10px solid yellow;
     animation-name: bottomToTop;
     animation-duration: 2s;
     animation-iteration-count: 1;
 }
 
 .homeText{
-    font-size: 8rem;
+    font-size: 3rem;
     color: yellow;
     animation-name: bottomToTop;
     animation-duration: 2s;
@@ -126,17 +128,57 @@ body{
     animation-delay: 1s;
     animation-fill-mode: forwards;
     opacity: 0;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+}
+
+.homecontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .About{
-    background-image: url(http://picsum.photos/seed/451/1000);
-    background-size: cover;
-    background-attachment: fixed;
-    flex-direction: column;
-    justify-content: flex-start !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4"
+    
+    ;
 }   
 
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/319/1000);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 200px 0;
+}
+
+.about_box2{
+    grid-template: box2;
+}
+.about_box2{
+    grid-template: box2;
+}
+.about_box4{
+    grid-template: box4;
+    background-image: url(https://picsum.photos/seed/542/1000);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 200px 0 0 0;
+}
 .Showcase{
     background-image: url(http://picsum.photos/seed/451/1000);
     background-size: cover;
@@ -169,7 +211,9 @@ body{
     color:black;
     position: sticky;
     top: 10vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 80;
+    margin-bottom: auto;
+    
 }
 
 @keyframes bottomToTop{
